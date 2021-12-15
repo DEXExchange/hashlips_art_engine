@@ -1,22 +1,22 @@
-# Welcome to HashLips 👄
+# Welcome to MILM 👄
 
 ![](https://github.com/DEXExchange/hashlips_art_engine/blob/main/logo.png)
 
-All the code in these repos was created and explained by HashLips on the main YouTube channel.
+All the code in these forked repos were created and explained by HashLips.
 
 To find out more please visit:
 
-[📺 YouTube](https://www.youtube.com/channel/UC1LV4_VQGBJHTJjEWUmy8nA)
+[📺 KinToshi Dev's YouTube](https://www.youtube.com/KinToshi)
 
-[👄 Discord](https://discord.com/invite/qh6MWhMJDN)
+[👄 MILM Discord](https://discord.com/invite/UP4m5UyVPb)
 
-[💬 Telegram](https://t.me/hashlipsnft)
+[💬 MILM Telegram](https://t.me/MILMNFT)
 
-[🐦 Twitter](https://twitter.com/hashlipsnft)
+[🐦 MILM Twitter](https://twitter.com/MILMNFT)
 
-[ℹ️ Website](https://hashlips.online/HashLips)
+[ℹ️ Website](https://milmnft.com)
 
-# HashLips Art Engine 🔥
+# MILM Art Engine 🔥
 
 ![](https://github.com/DEXExchange/hashlips_art_engine/blob/main/banner.png)
 
