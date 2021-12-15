@@ -55,11 +55,11 @@ const layerConfigurations = [
   {
     growEditionSizeTo: 100,
     layersOrder: [
-      { name: "Head" },
-      { name: "Mouth" },
-      { name: "Eyes" },
-      { name: "Eyeswear" },
-      { name: "Headwear" },
+      { name: "Background" },
+      { name: "Body" },
+      { name: "Makeup" },
+      { name: "Lip Color" },
+      { name: "Eye Color" },
     ],
   },
 ];
@@ -69,33 +69,40 @@ The `name` of each layer object represents the name of the folder (in `/layers/`
 
 Optionally you can now add multiple different `layerConfigurations` to your collection. Each configuration can be unique and have different layer orders, use the same layers or introduce new ones. This gives the artist flexibility when it comes to fine tuning their collections to their needs.
 
-_Example:_ If you were creating a portrait design, you might have a background, then a head, a mouth, eyes, eyewear, and then headwear and you want to create a new race or just simple re-order the layers or even introduce new layers, then you're `layerConfigurations` and `layersOrder` would look something like this:
+_Example:_ If you were creating a portrait design, you might have a background, then a body, a makeup, lip color and then eye color and you want to create a new race or just simple re-order the layers or even introduce new layers, then you're `layerConfigurations` and `layersOrder` would look something like this:
 
 ```js
 const layerConfigurations = [
   {
-    // Creates up to 50 artworks
-    growEditionSizeTo: 50,
+    // Creates up to 6900 artworks
+    growEditionSizeTo: 6900,
     layersOrder: [
       { name: "Background" },
-      { name: "Head" },
-      { name: "Mouth" },
-      { name: "Eyes" },
-      { name: "Eyeswear" },
-      { name: "Headwear" },
+      { name: "Body" },
+      { name: "Makeup" },
+      { name: "Lip Color" },
+      { name: "Eye Color" },
+      { name: "Clothing" },
+      { name: "Facewear" },
+      { name: "Accessory" },
+      { name: "Hair" },
+      { name: "MILM NFT Polaroid Boarder" },
     ],
   },
   {
-    // Creates an additional 100 artworks
-    growEditionSizeTo: 150,
+    // Creates an additional 69 artworks
+    growEditionSizeTo: 6969,
     layersOrder: [
-      { name: "Background" },
-      { name: "Head" },
-      { name: "Eyes" },
-      { name: "Mouth" },
-      { name: "Eyeswear" },
-      { name: "Headwear" },
-      { name: "AlienHeadwear" },
+      { name: "Alien Background" },
+      { name: "Alien Body" },
+      { name: "Alien Makeup" },
+      { name: "Alien Lip Color" },
+      { name: "Alien Eye Color" },
+      { name: "Alien Clothing" },
+      { name: "Alien Facewear" },
+      { name: "Alien Accessory" },
+      { name: "Alien Hair" },
+      { name: "MILM NFT Polaroid Boarder" },
     ],
   },
 ];
@@ -113,7 +120,7 @@ If you need a layers to have a different opacity then you can add the `opacity: 
 
 If you want to have a layer _ignored_ in the DNA uniqueness check, you can set `bypassDNA: true` in the `options` object. This has the effect of making sure the rest of the traits are unique while not considering the `Background` Layers as traits, for example. The layers _are_ included in the final image.
 
-To use a different metadata attribute name you can add the `displayName: "Awesome Eye Color"` to the `options` object. All options are optional and can be addes on the same layer if you want to.
+To use a different metadata attribute name you can add the `displayName: "Awesome Skin Color"` to the `options` object. All options are optional and can be addes on the same layer if you want to.
 
 Here is an example on how you can play around with both filter fields:
 
@@ -127,19 +134,19 @@ const layerConfigurations = [
           bypassDNA: false;
         }
       }},
-      { name: "Eyeball" },
+      { name: "Body" },
       {
-        name: "Eye color",
+        name: "Skin color",
         options: {
           blend: MODE.destinationIn,
           opacity: 0.2,
-          displayName: "Awesome Eye Color",
+          displayName: "Awesome Skin Color",
         },
       },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid", options: { blend: MODE.overlay, opacity: 0.7 } },
-      { name: "Top lid" },
+      { name: "Body" },
+      { name: "Makeup" },
+      { name: "Lip Color", options: { blend: MODE.overlay, opacity: 0.7 } },
+      { name: "Eye Color" },
     ],
   },
 ];
@@ -197,19 +204,19 @@ The program will output all the images in the `build/images` directory along wit
   "dna": "d956cdf4e460508b5ff90c21974124f68d6edc34",
   "name": "#1",
   "description": "This is the description of your NFT project",
-  "image": "https://hashlips/nft/1.png",
+  "image": "https://milm/nft/1.png",
   "edition": 1,
   "date": 1731990799975,
   "attributes": [
-    { "trait_type": "Background", "value": "Black" },
-    { "trait_type": "Eyeball", "value": "Red" },
-    { "trait_type": "Eye color", "value": "Yellow" },
-    { "trait_type": "Iris", "value": "Small" },
-    { "trait_type": "Shine", "value": "Shapes" },
-    { "trait_type": "Bottom lid", "value": "Low" },
-    { "trait_type": "Top lid", "value": "Middle" }
+    { "trait_type": "Background", "value": "Brown" },
+    { "trait_type": "Body", "value": "Albino_Pink_Skin" },
+    { "trait_type": "Clothing", "value": "Chef_Apron" },
+    { "trait_type": "Eye Color", "value": "Green_Eye" },
+    { "trait_type": "Facewear", "value": "Black_Aviator_Sunglasses" },
+    { "trait_type": "Lip Color", "value": "Baby_Pink_Lipstick" },
+    { "trait_type": "Makeup", "value": "Bindi_Makeup" }
   ],
-  "compiler": "HashLips Art Engine"
+  "compiler": "MILM Art Engine"
 }
 ```
 
@@ -217,7 +224,7 @@ You can also add extra metadata to each metadata file by adding your extra items
 
 ```js
 const extraMetadata = {
-  creator: "Daniel Eugene Botha",
+  creator: "MILM",
 };
 ```
 
@@ -292,7 +299,7 @@ npm run rarity
 The output will look something like this:
 
 ```sh
-Trait type: Top lid
+Trait type: Clothing
 {
   trait: 'High',
   chance: '30',
